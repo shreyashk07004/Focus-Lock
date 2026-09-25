@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260" role="img" aria-label="An app's usage ring fills up to its daily limit, then the app locks for the day">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .label { fill: #e0e7ff; font-size: 20px; font-weight: 600; }
+    .sub { fill: #a5b4fc; font-size: 14px; }
+  </style>
+
+  <rect width="640" height="260" rx="24" fill="url(#bg)"/>
+
+  <!-- Phone -->
+  <rect x="60" y="30" width="130" height="200" rx="20" fill="#0f172a" stroke="#6366f1" stroke-width="2"/>
+  <rect x="104" y="40" width="42" height="6" rx="3" fill="#334155"/>
+
+  <!-- App tile inside phone: an app being used -->
+  <g>
+    <rect x="95" y="90" width="60" height="60" rx="16" fill="#ec4899">
+      <animate attributeName="opacity" values="1;1;0.25;0.25;1" keyTimes="0;0.62;0.68;0.95;1" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="125" cy="120" r="14" fill="none" stroke="#fff" stroke-width="4">
+      <animate attributeName="opacity" values="1;1;0.25;0.25;1" keyTimes="0;0.62;0.68;0.95;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Lock overlay on the phone -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.62;0.68;0.95;1" dur="7s" repeatCount="indefinite"/>
+      <rect x="62" y="32" width="126" height="196" rx="18" fill="#0f172a" fill-opacity="0.85"/>
+      <rect x="108" y="118" width="34" height="26" rx="5" fill="#f87171"/>
+      <path d="M115 118 v-8 a10 10 0 0 1 20 0 v8" fill="none" stroke="#f87171" stroke-width="4"/>
+      <text x="125" y="170" text-anchor="middle" class="sub" style="fill:#fecaca;font-size:12px">Locked for today</text>
+    </g>
+  </g>
+
+  <!-- Progress ring -->
+  <g transform="translate(330 130)">
+    <circle r="70" fill="none" stroke="#312e81" stroke-width="14"/>
+    <circle r="70" fill="none" stroke="#22c55e" stroke-width="14" stroke-linecap="round"
+            stroke-dasharray="440" stroke-dashoffset="440" transform="rotate(-90)">
+      <animate attributeName="stroke-dashoffset" values="440;440;0;0;440" keyTimes="0;0.05;0.62;0.95;1" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#22c55e;#22c55e;#facc15;#f87171;#f87171;#22c55e" keyTimes="0;0.3;0.5;0.62;0.95;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Timer text: swaps between states -->
+    <text y="8" text-anchor="middle" class="label" style="font-size:24px">
+      <tspan>10 min</tspan>
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.6;0.62;0.97;1" dur="7s" repeatCount="indefinite"/>
+    </text>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.62;0.66;0.95;1" dur="7s" repeatCount="indefinite"/>
+      <rect x="-17" y="-8" width="34" height="26" rx="5" fill="#f87171"/>
+      <path d="M-10 -8 v-8 a10 10 0 0 1 20 0 v8" fill="none" stroke="#f87171" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- Captions -->
+  <g transform="translate(425 0)">
+    <text x="0" y="95" class="label">Set a daily limit</text>
+    <text x="0" y="120" class="sub">Instagram · 10 min / day</text>
+    <text x="0" y="165" class="label">
+      <tspan>Tracking usage…</tspan>
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.6;0.62;0.97;1" dur="7s" repeatCount="indefinite"/>
+    </text>
+    <text x="0" y="165" class="label" style="fill:#fca5a5" opacity="0">
+      <tspan>Locked until midnight</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.62;0.66;0.95;1" dur="7s" repeatCount="indefinite"/>
+    </text>
+    <text x="0" y="190" class="sub">On-device · no internet</text>
+  </g>
+</svg>
