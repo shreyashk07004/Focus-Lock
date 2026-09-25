@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Configuration of FocusLockAccessibilityService. Kept to the minimum the blocker needs: it hears when
+    a different window comes to the front (to see which app is showing) and never reads window contents.
+    notificationTimeout 0 delivers each event at once; a locked app has to be caught within a second or two.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:canRetrieveWindowContent="false"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="0" />

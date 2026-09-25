@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FocusLock</string>
+
+    <!-- Shared -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove">Remove</string>
+    <string name="undo">Undo</string>
+    <string name="retry">Retry</string>
+    <string name="save">Save</string>
+    <string name="unit_min">min</string>
+    <string name="daily_limit">Daily limit</string>
+    <string name="duration_min">%1$d min</string>
+    <string name="duration_h">%1$d h</string>
+    <string name="duration_h_min">%1$d h %2$d min</string>
+    <string name="limit_per_day">%1$s/day</string>
+    <string name="limit_per_day_paused">%1$s/day · Paused</string>
+    <string name="limit_range_hint">Choose between %1$s and %2$s</string>
+    <string name="remove_dialog_title">Remove this app?</string>
+    <string name="remove_dialog_message">“%1$s” will no longer have a daily limit and will leave your list. You can undo this right after.</string>
+
+    <!-- Dashboard -->
+    <string name="add_app">Add app</string>
+    <string name="add_first_app">Add your first app</string>
+    <string name="empty_title">No apps limited yet</string>
+    <string name="empty_body">Pick an app you want to spend less time on and give it a daily limit.</string>
+    <string name="removed_snackbar">Removed “%1$s”</string>
+    <string name="toggle_limit_desc">Limit for %1$s</string>
+
+    <!-- Add app -->
+    <string name="add_pick_title">Choose an app</string>
+    <string name="add_limit_title">Set daily limit</string>
+    <string name="add_limit_hint">You can change this any time by tapping the app on the home screen.</string>
+    <string name="search_apps_hint">Search apps</string>
+    <string name="search_clear">Clear search</string>
+    <string name="search_no_match">No apps match “%1$s”</string>
+    <string name="add_no_apps_left">Every app on this device already has a limit.</string>
+    <string name="add_load_error">Couldn\'t load your apps. Please try again.</string>
+
+    <!-- Edit app -->
+    <string name="edit_limit_on">Limit is on</string>
+    <string name="edit_limit_paused">Limit is paused</string>
+    <string name="edit_limit_on_desc">This app is held to its daily time.</string>
+    <string name="edit_limit_paused_desc">Nothing is limited until you switch it back on.</string>
+    <string name="edit_autosave">Changes are saved automatically.</string>
+    <string name="edit_remove">Remove app</string>
+    <string name="edit_not_found">This limit no longer exists.</string>
+    <string name="edit_locked_title">Locked for today</string>
+    <string name="edit_locked_body">%1$s used of %2$s. Give it some extra time to open it again today.</string>
+    <string name="edit_extra_title">+%1$s extra time today</string>
+    <string name="edit_extra_used_up">All of it is used up.</string>
+    <string name="edit_limit_locked_note">The daily limit can\'t be changed while you have extra time today. It can be changed again tomorrow.</string>
+    <string name="edit_unlock_extra">Extra time for today</string>
+    <string name="edit_unlock_chip">+%1$d min</string>
+    <string name="edit_unlock_button">Unlock now</string>
+    <string name="edit_unlock_hint">Gives you %1$s more, starting now. Tomorrow the limit is back to normal.</string>    <!-- Usage on the dashboard -->
+    <string name="duration_s">%1$d s</string>
+    <string name="duration_min_s">%1$d min %2$d s</string>
+    <string name="usage_used">%1$s used</string>
+    <string name="usage_left">%1$s left</string>
+    <string name="usage_locked">Locked</string>
+    <string name="usage_extra">+%1$s extra today</string>
+    <string name="usage_progress_desc">%1$s used of %2$s</string>
+
+    <!-- Setup banner on the dashboard -->
+    <string name="setup_banner_title">Finish setup to start tracking</string>
+    <string name="setup_banner_body">FocusLock still needs: %1$s. Until then your limits are saved, but your time isn\'t counted.</string>
+    <string name="setup_banner_button">Review permissions</string>
+    <string name="blocking_banner_title">Blocking is off</string>
+    <string name="blocking_banner_body">FocusLock can count your time, but it can\'t lock an app once its limit is reached until you allow: %1$s.</string>
+    <string name="permissions_open_desc">Permissions</string>
+
+    <!-- Permissions checklist -->
+    <string name="permissions_title">Permissions</string>
+    <string name="permissions_intro">FocusLock needs a few permissions to keep an eye on your limits. Everything stays on your device; nothing is ever sent anywhere.</string>
+    <string name="permissions_summary">%1$d of %2$d granted</string>
+    <string name="permissions_footer">Usage access and notifications are needed to start tracking. The other two are needed to lock an app once its limit is reached.</string>
+    <string name="perm_granted">Granted</string>
+    <string name="perm_missing">Missing</string>
+    <string name="perm_tag_tracking">Needed for tracking</string>
+    <string name="perm_tag_blocking">Needed for blocking</string>
+    <string name="perm_button_open_settings">Open settings</string>
+    <string name="perm_button_allow">Allow</string>
+    <string name="perm_usage_title">Usage access</string>
+    <string name="perm_usage_why">Lets FocusLock see how long each app is open, so it can count your time.</string>
+    <string name="perm_overlay_title">Display over other apps</string>
+    <string name="perm_overlay_why">Lets FocusLock show its lock screen on top of an app once you reach its limit.</string>
+    <string name="perm_accessibility_title">Accessibility</string>
+    <string name="perm_accessibility_why">Lets FocusLock notice which app is on screen and send you home when that app is locked.</string>
+    <string name="perm_accessibility_hint">If the switch is greyed out: open FocusLock\'s App info, tap the ⋮ menu and choose “Allow restricted settings”.</string>
+    <string name="perm_notifications_title">Notifications</string>
+    <string name="perm_notifications_why">Shows a small, quiet notification while FocusLock keeps tracking in the background.</string>
+
+    <!-- Background monitor (foreground service) -->
+    <string name="monitor_channel_name">Usage monitor</string>
+    <string name="monitor_channel_description">Shown while FocusLock is keeping track of your app limits.</string>
+    <string name="monitor_notification_title">FocusLock is tracking your limits</string>
+    <string name="monitor_notification_text">Tap to open. Everything stays on your device.</string>
+    <!-- Lock screen and "App locked" notification -->
+    <string name="lock_title">Locked for today</string>
+    <string name="lock_used_of_limit">Used %1$s of %2$s</string>
+    <string name="lock_resets">Resets at %1$s · in %2$s</string>
+    <string name="lock_manage">Manage in FocusLock</string>
+    <string name="lock_channel_name">Locks and unlocks</string>
+    <string name="lock_channel_description">Tells you when an app has reached its daily limit and is locked, and when you unlock it.</string>
+    <string name="lock_notification_title">%1$s is locked</string>
+    <string name="lock_notification_text">Daily limit reached. It unlocks at midnight. Tap to manage.</string>
+    <string name="unlock_notification_title">%1$s unlocked</string>
+    <string name="unlock_notification_text">You have %1$s more today. Tap to see your time.</string>
+
+    <string name="accessibility_service_description">FocusLock uses this to notice which app is on screen, so it can send you back to the home screen once an app has used up its daily limit. It never reads what is shown inside apps.</string>
+</resources>
